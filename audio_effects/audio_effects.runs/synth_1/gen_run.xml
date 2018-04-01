@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1521622760">
-  <File Type="PA-TCL" Name="AUDIO_FX_TOP.tcl"/>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1522504403">
   <File Type="RDS-PROPCONSTRS" Name="AUDIO_FX_TOP_drc_synth.rpt"/>
+  <File Type="PA-TCL" Name="AUDIO_FX_TOP.tcl"/>
   <File Type="RDS-RDS" Name="AUDIO_FX_TOP.vds"/>
   <File Type="RDS-UTIL" Name="AUDIO_FX_TOP_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="AUDIO_FX_TOP_utilization_synth.pb"/>
@@ -10,6 +10,20 @@
   <File Type="VDS-TIMING-PB" Name="AUDIO_FX_TOP_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/clock_40k.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/2d_register.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/SPI.v">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../../EE2020 EE2026 AY1718 SEM 1/audio_effects.srcs/sources_1/new/SPI.v"/>
@@ -27,13 +41,6 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/clock_gen.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/2d_register.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>

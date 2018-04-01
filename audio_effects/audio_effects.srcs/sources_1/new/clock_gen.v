@@ -29,7 +29,7 @@ module clock_gen(
     
     reg [20:0] COUNT = 0;
     reg [20:0] COUNT1 = 0;
-    reg count2 = 0;
+    reg        COUNT2 = 0;
     
     initial begin
         NEW_CLK_50M = 0;
@@ -40,11 +40,11 @@ module clock_gen(
     // 5000 ratio between 100M to 20K
     always @(posedge CLK) begin
         COUNT1 <= (COUNT == 4999) ? 0 : COUNT1 + 1;
-        count2 <= count2 + 1;
+        COUNT2 <= COUNT2 + 1;
         COUNT <= (COUNT == 2499) ? 0 : COUNT + 1;
-        NEW_CLK_10K <= (COUNT == 0) ? ~NEW_CLK_10K : NEW_CLK_10K;
+        NEW_CLK_10K <= (COUNT1 == 0) ? ~NEW_CLK_10K : NEW_CLK_10K;
         NEW_CLK_20K <= (COUNT == 0) ? ~NEW_CLK_20K : NEW_CLK_20K;    
-        NEW_CLK_50M <= count2;
+        NEW_CLK_50M <= COUNT2;
     end
 
 endmodule

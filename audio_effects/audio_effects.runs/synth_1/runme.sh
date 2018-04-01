@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='E:/NUS/Semester 2/EE2026/EE2026_Project_Template.xpr/audio_effects/audio_effects.runs/synth_1'
+HD_PWD='E:/NUS/Semester_2/EE2026/EE2026_Project_Template.xpr/audio_effects/audio_effects.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

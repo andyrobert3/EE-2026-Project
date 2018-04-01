@@ -51,12 +51,12 @@ set rc [catch {
   set_param xicom.use_bs_reader 1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir {E:/NUS/Semester 2/EE2026/EE2026_Project_Template.xpr/audio_effects/audio_effects.cache/wt} [current_project]
-  set_property parent.project_path {E:/NUS/Semester 2/EE2026/EE2026_Project_Template.xpr/audio_effects/audio_effects.xpr} [current_project]
-  set_property ip_repo_paths {{e:/NUS/Semester 2/EE2026/EE2026_Project_Template.xpr/audio_effects/audio_effects.cache/ip}} [current_project]
-  set_property ip_output_repo {{e:/NUS/Semester 2/EE2026/EE2026_Project_Template.xpr/audio_effects/audio_effects.cache/ip}} [current_project]
-  add_files -quiet {{E:/NUS/Semester 2/EE2026/EE2026_Project_Template.xpr/audio_effects/audio_effects.runs/synth_1/AUDIO_FX_TOP.dcp}}
-  read_xdc {{E:/NUS/Semester 2/EE2026/EE2026_Project_Template.xpr/audio_effects/audio_effects.srcs/constrs_1/imports/Learn/Basys3_Master.xdc}}
+  set_property webtalk.parent_dir E:/NUS/Semester_2/EE2026/EE2026_Project_Template.xpr/audio_effects/audio_effects.cache/wt [current_project]
+  set_property parent.project_path E:/NUS/Semester_2/EE2026/EE2026_Project_Template.xpr/audio_effects/audio_effects.xpr [current_project]
+  set_property ip_repo_paths e:/NUS/Semester_2/EE2026/EE2026_Project_Template.xpr/audio_effects/audio_effects.cache/ip [current_project]
+  set_property ip_output_repo e:/NUS/Semester_2/EE2026/EE2026_Project_Template.xpr/audio_effects/audio_effects.cache/ip [current_project]
+  add_files -quiet E:/NUS/Semester_2/EE2026/EE2026_Project_Template.xpr/audio_effects/audio_effects.runs/synth_1/AUDIO_FX_TOP.dcp
+  read_xdc E:/NUS/Semester_2/EE2026/EE2026_Project_Template.xpr/audio_effects/audio_effects.srcs/constrs_1/imports/Learn/Basys3_Master.xdc
   link_design -top AUDIO_FX_TOP -part xc7a35tcpg236-1
   write_hwdef -file AUDIO_FX_TOP.hwdef
   close_msg_db -file init_design.pb
