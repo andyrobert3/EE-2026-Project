@@ -1,24 +1,6 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 03/17/2018 11:49:18 AM
-// Design Name: 
-// Module Name: 2d_register
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
 
+// 1-second delay
 module twoD_register(
         input clk_write,
         input clk_read,
@@ -26,8 +8,12 @@ module twoD_register(
         output reg [11:0] data_out
     );
     
-    // distance between j and i determines time delay
-    // pitch is determined by clock
+    // Distance between j and i determines time delay
+    // Instead of reading 20 thousand spaces behind writing,
+    // reading is put 1 space in front of writing in a 20 000 space
+    // circular buffer to create a distance of 20 000 spaces with
+    // minimal memory usage
+    
     reg [11:0] memory [0:20000];
     
     reg [14:0] i = 0;
@@ -41,10 +27,13 @@ module twoD_register(
     always @ (posedge clk_read) begin
         data_out <= memory[j];
         j <= (j == 20000) ? 0: j + 1;
-    end
-        
+    end        
 endmodule
 
+
+
+
+// Record 5-second audio
 module record(
         input clk,
         input ON,
@@ -52,8 +41,7 @@ module record(
         output reg [11:0] data_out
     );
     
-    // distance between j and i determines time delay
-    // pitch is determined by clock
+    // Distance between j and i determines time delay
     reg [11:0] memory [0:100000];
     
     reg [17:0] i = 0;
