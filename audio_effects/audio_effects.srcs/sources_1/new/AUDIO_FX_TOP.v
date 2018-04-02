@@ -63,7 +63,7 @@ module AUDIO_FX_TOP(
     play_song u6(state[4], clk_20k, speaker_out2);              // Play "Do Re Mi" - The Sound of Music (extra feature)
                                                                 // state[4] switch to stop and start song
                                                                 
-    twoD_register u7(clk_20k, clk_20k, MIC_in, speaker_out3);   // Audio delay
+    twoD_register u7(state[4], clk_20k, clk_20k, MIC_in, speaker_out3);   // Audio delay
     
     
     record u5(clk_20k, state[4], MIC_in, speaker_out4);         // Record audio (delay improvement)
@@ -73,17 +73,20 @@ module AUDIO_FX_TOP(
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // Always block for feature selection
     always @ (state[0], state[1], state[2]) begin
-      if (state[0])         // Musical Instrument + improvement
+      if (state[0])                       // Musical Instrument + improvement
           speaker_out <= speaker_out1;
           
-      else if (state[1])    // Play Song
+      else if (state[1])                  // Play Song
           speaker_out <= speaker_out2;
           
-      else if (state[2])    // Delay
+      else if (state[2])                  // Delay + pitch shift
           speaker_out <= speaker_out3;
           
-      else if (state[3])    // Delay improvement
+      else if (state[3])                  // Record audio
           speaker_out <= speaker_out4;
+          
+      else if (state == 5'b00000)         // Real-time signal
+          speaker_out <= MIC_in;
     end
     
     // Assigning speaker_out 12-bit value to LED array for visualization of audio

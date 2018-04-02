@@ -2,6 +2,7 @@
 
 // 1-second delay
 module twoD_register(
+        input ON,
         input clk_write,
         input clk_read,
         input [11:0] data_in,
@@ -18,6 +19,14 @@ module twoD_register(
     
     reg [14:0] i = 0;
     reg [14:0] j = 1;
+    reg a = 0;
+    
+    always @ (ON) begin
+        if (ON)
+            a <= 1;
+        else
+            a <= 0;
+    end
     
     always @ (posedge clk_write) begin
         memory[i] <= data_in;
@@ -26,7 +35,7 @@ module twoD_register(
     
     always @ (posedge clk_read) begin
         data_out <= memory[j];
-        j <= (j == 20000) ? 0: j + 1;
+        j <= (j == 20000) ? 0: j + a;
     end        
 endmodule
 

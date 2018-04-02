@@ -10,12 +10,12 @@
     <Option Name="Part" Val="xc7a35tcpg236-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
-    <Option Name="CompiledLibDirModelSim" Val="$PPRDIR/../../../alexa/AppData/Semester 2/EE2026/EE2026_Project_Template.xpr/audio_effects/audio_effects.cache/compile_simlib/modelsim"/>
-    <Option Name="CompiledLibDirQuesta" Val="$PPRDIR/../../../alexa/AppData/Semester 2/EE2026/EE2026_Project_Template.xpr/audio_effects/audio_effects.cache/compile_simlib/questa"/>
-    <Option Name="CompiledLibDirIES" Val="$PPRDIR/../../../alexa/AppData/Semester 2/EE2026/EE2026_Project_Template.xpr/audio_effects/audio_effects.cache/compile_simlib/ies"/>
-    <Option Name="CompiledLibDirVCS" Val="$PPRDIR/../../../alexa/AppData/Semester 2/EE2026/EE2026_Project_Template.xpr/audio_effects/audio_effects.cache/compile_simlib/vcs"/>
-    <Option Name="CompiledLibDirRiviera" Val="$PPRDIR/../../../alexa/AppData/Semester 2/EE2026/EE2026_Project_Template.xpr/audio_effects/audio_effects.cache/compile_simlib/riviera"/>
-    <Option Name="CompiledLibDirActivehdl" Val="$PPRDIR/../../../alexa/AppData/Semester 2/EE2026/EE2026_Project_Template.xpr/audio_effects/audio_effects.cache/compile_simlib/activehdl"/>
+    <Option Name="CompiledLibDirModelSim" Val="$PPRDIR/../../../AppData/Roaming/AppData/Roaming/alexa/AppData/Semester 2/EE2026/EE2026_Project_Template.xpr/audio_effects/audio_effects.cache/compile_simlib/modelsim"/>
+    <Option Name="CompiledLibDirQuesta" Val="$PPRDIR/../../../AppData/Roaming/AppData/Roaming/alexa/AppData/Semester 2/EE2026/EE2026_Project_Template.xpr/audio_effects/audio_effects.cache/compile_simlib/questa"/>
+    <Option Name="CompiledLibDirIES" Val="$PPRDIR/../../../AppData/Roaming/AppData/Roaming/alexa/AppData/Semester 2/EE2026/EE2026_Project_Template.xpr/audio_effects/audio_effects.cache/compile_simlib/ies"/>
+    <Option Name="CompiledLibDirVCS" Val="$PPRDIR/../../../AppData/Roaming/AppData/Roaming/alexa/AppData/Semester 2/EE2026/EE2026_Project_Template.xpr/audio_effects/audio_effects.cache/compile_simlib/vcs"/>
+    <Option Name="CompiledLibDirRiviera" Val="$PPRDIR/../../../AppData/Roaming/AppData/Roaming/alexa/AppData/Semester 2/EE2026/EE2026_Project_Template.xpr/audio_effects/audio_effects.cache/compile_simlib/riviera"/>
+    <Option Name="CompiledLibDirActivehdl" Val="$PPRDIR/../../../AppData/Roaming/AppData/Roaming/alexa/AppData/Semester 2/EE2026/EE2026_Project_Template.xpr/audio_effects/audio_effects.cache/compile_simlib/activehdl"/>
     <Option Name="BoardPart" Val=""/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
