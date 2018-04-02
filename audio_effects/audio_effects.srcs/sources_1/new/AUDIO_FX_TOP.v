@@ -8,12 +8,12 @@
 // Matric No.       : A0170761H(James) , A0170903L(Matthew)
 // Description      : EE2026 Real-time Audio Effects FPGA Design Project
 //                    Features included
-//                    - Audio delay + 5-second audio recorder
+//                    - Audio delay + pitch shift
 //                    - Musical instrument + octave selector
 //
 //                    Extra features
 //                    - Play "Do Re Mi" - The Sound of Music
-//                    - Countdown timer using 7 segment-display
+//                    - 5-second Audio Recorder
 // 
 // Work Distribution: James Arista Yaputra -> Musical Instrument + improvement
 //                    Matthew Alexander    -> Audio Delay + improvement
